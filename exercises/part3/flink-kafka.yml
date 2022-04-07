@@ -3,7 +3,8 @@ services:
   sql-client:
     hostname: sql-client
     container_name: sql-client
-    image: flink-sql-custom:latest
+    image: flink-sql-client:latest
+    build: ./flink/client-image
     ports:
       - "8073:8083"
     depends_on:
