@@ -12,16 +12,16 @@ To run this tutorial you need docker and docker-compose. [Here](https://docs.doc
 
 The tutorial runs 4 containers:
 
-- Jasper - an RSP Engine that will run out continous queries
-- ColorStream - a streamer of color instances in RDF
-- StreamHub - A Stream Publishing Service
-- MyNotebook - A Jupyter Notebook interface to interact with out rdf streams/rsp engines
+- Jasper (ports: `8181-8200`)- an RSP Engine that will run out continous queries
+- ColorStream (ports: `5555` and `8080`) - a streamer of color instances in RDF
+- StreamHub (port: `9292`) - A Stream Publishing Service
+- MyNotebook (port: `8888`) - A Jupyter Notebook interface to interact with out rdf streams/rsp engines
 
 ## Getting ready for the tutorial
 
 Clone this repository
 
-From inside the project folder run 
+From inside the project folder run
 
 ```docker-compose pull```
 
