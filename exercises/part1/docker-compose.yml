@@ -1,0 +1,34 @@
+version: '3.5'
+networks:
+  rwnet:
+    name: rwnet
+
+services:
+    streamhub:
+      image: streamreasoning/streamhub:1.1
+      container_name: streamhub
+      networks:
+        - rwnet
+
+    jasper:
+      image: streamreasoning/jasper:1.1
+      container_name: jasper
+      networks:
+        - rwnet   
+
+    colorstream:
+      build: ./colorstream
+      container_name: colorstream
+      networks:
+        - rwnet
+
+    notebook:
+      build: ./notebook
+      container_name: mynotebook
+      ports:
+        - "8888:8888"
+      volumes:
+        - ./notebook/lectures:/home/jovyan/work
+      networks:
+        - rwnet
+
