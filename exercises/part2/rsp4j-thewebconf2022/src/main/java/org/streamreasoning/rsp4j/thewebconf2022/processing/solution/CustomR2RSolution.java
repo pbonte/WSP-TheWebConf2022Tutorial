@@ -132,13 +132,13 @@ public class CustomR2RSolution {
     prefixes.addPrefix("","http://rsp4j.io/covid/");
     // R2R
     BGP bgp = BGP.createWithPrefixes(prefixes)
-            .addTP("?s", ":isIn", "?o")
-            .addTP("?s2",":isIn", "?o")
+            .addTP("?person1", ":isIn", "?room")
+            .addTP("?person2",":isIn", "?room")
             .build();
 
     BGP bgp2 = BGP.createWithPrefixes(prefixes)
             .addTP("?testResult", "a", ":TestResultPost")
-            .addTP("?testResult",":who", "?s")
+            .addTP("?testResult",":who", "?person1")
             .addTP("?testResult",":hasResult",":positive")
             .build();
 

@@ -111,11 +111,11 @@ public class AbstractionExample {
     // Definition of the R2R operators
     // BGP for window 1
     BGP bgp = BGP.createWithPrefixes(prefixes)
-            .addTP("?s", ":isIn", "?o")
+            .addTP("?person1", ":isIn", "?room")
             .build();
     // BGP for window 2
     BGP bgp2 = BGP.createWithPrefixes(prefixes)
-            .addTP("?s2", ":isWith", "?s")
+            .addTP("?person2", ":isWith", "?person1")
             .build();
 
 
@@ -127,7 +127,7 @@ public class AbstractionExample {
                     .addR2R("window1", bgp)
                     .addR2R("window2", bgp2)
                     .addR2S("out", new Rstream<Binding, Binding>())
-                    .addProjectionStrings(List.of("?s","?o","?s2"))
+                    .addProjectionStrings(List.of("?person1","?room","?person2"))
                     .build();
     ContinuousProgram<Graph, Graph, Binding, Binding> cp =
             new ContinuousProgram.ContinuousProgramBuilder()

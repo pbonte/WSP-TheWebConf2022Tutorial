@@ -123,22 +123,22 @@ public class AbstractionSolution {
     // Definition of the R2R operators
     // BGP for window 1
     BGP bgp = BGP.createWithPrefixes(prefixes)
-            .addTP("?s", ":isIn", "?o")
+            .addTP("?person1", ":isIn", "?room")
             .build();
     // BGP for window 2
     BGP bgp2 = BGP.createWithPrefixes(prefixes)
-            .addTP("?s2", ":isWith", "?s")
+            .addTP("?person2", ":isWith", "?person1")
             .build();
     // BGP for window 3
-    // ?testResult a covid:TestResultPost; covid:who ?s3; covid:hasResult covid:positive
+    // ?testResult a covid:TestResultPost; covid:who ?person3; covid:hasResult covid:positive
     BGP bgp3 = BGP.createWithPrefixes(prefixes)
             .addTP("?testResult", "a", ":TestResultPost")
-            .addTP("?testResult", ":who", "?s3")
+            .addTP("?testResult", ":who", "?person3")
             .addTP("?testResult", ":hasResult", ":positive")
             .build();
-    //Filter definition for FILTER(?s3 = ?s || ?s3 = ?s2).
-    Filter<Binding> filter = new Filter<>(b->b.value("?s3").equals(b.value("?s")) ||
-            b.value("?s3").equals(b.value("?s2")));
+    //Filter definition for FILTER(?person3 = ?person || ?person3 = ?person2).
+    Filter<Binding> filter = new Filter<>(b->b.value("?person3").equals(b.value("?person1")) ||
+            b.value("?person3").equals(b.value("?person2")));
 
     // Create the RSP4J Task and Continuous Program that counts the number of s variables
     TaskAbstractionImpl<Graph, Graph, Binding, Binding> t =
@@ -152,7 +152,7 @@ public class AbstractionSolution {
                     .addR2R("window3", bgp3)
                     .addR2R("default", new R2RPipe(filter))
                     .addR2S("out", new Rstream<Binding, Binding>())
-                    .addProjectionStrings(List.of("?s","?o","?s2","?s3"))
+                    .addProjectionStrings(List.of("?person1","?room","?person2","?person3"))
                     .build();
     ContinuousProgram<Graph, Graph, Binding, Binding> cp =
             new ContinuousProgram.ContinuousProgramBuilder()

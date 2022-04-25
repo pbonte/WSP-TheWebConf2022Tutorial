@@ -70,12 +70,12 @@ public class QueryProcessingExample {
                 "PREFIX : <http://rsp4j.io/covid/> "
                 + "PREFIX rsp4j: <http://rsp4j.io/>"
                 + "REGISTER RSTREAM <http://out/stream> AS "
-                + "SELECT ?s ?o ?s2 "
+                + "SELECT ?person1 ?room ?person2 "
                 + "FROM NAMED WINDOW rsp4j:window ON :observations [RANGE PT10M STEP PT1M] "
                 + "FROM NAMED WINDOW rsp4j:window2 ON :tracing [RANGE PT10M STEP PT1M] "
                 + "WHERE {"
-                + "   WINDOW rsp4j:window { ?s :isIn ?o .}"
-                + "   WINDOW rsp4j:window2 { ?s2 :isWith ?s .}"
+                + "   WINDOW rsp4j:window { ?person1 :isIn ?room .}"
+                + "   WINDOW rsp4j:window2 { ?person2 :isWith ?person1 .}"
                     + "}");
 
     // Create the RSP4J Task and Continuous Program

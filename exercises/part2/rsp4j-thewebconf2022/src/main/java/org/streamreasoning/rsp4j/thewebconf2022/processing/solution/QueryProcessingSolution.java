@@ -79,16 +79,16 @@ public class QueryProcessingSolution {
             "PREFIX : <http://rsp4j.io/covid/> "
                 + " PREFIX rsp4j: <http://rsp4j.io/> "
                 + "REGISTER RSTREAM <http://out/stream> AS "
-                + "SELECT ?s ?s2 ?o ?s3 "
+                + "SELECT ?person1 ?person2 ?room ?person3 "
                 + " "
                 + " FROM NAMED WINDOW rsp4j:window ON :observations [RANGE PT10M STEP PT1M] "
                 + " FROM NAMED WINDOW rsp4j:window2 ON :tracing [RANGE PT10M STEP PT1M] "
                 + " FROM NAMED WINDOW rsp4j:window3 ON :testResults [RANGE PT24H STEP PT1M] "
                 + "WHERE {"
-                + "   WINDOW rsp4j:window { ?s :isIn ?o .}"
-                + "   WINDOW rsp4j:window2 { ?s2 :isWith ?s .}"
-                + "   WINDOW rsp4j:window3 { ?testResult a :TestResultPost; :who ?s3; :hasResult :positive .}"
-                + " FILTER(?s3 = ?s || ?s3 = ?s2)."
+                + "   WINDOW rsp4j:window { ?person1 :isIn ?room .}"
+                + "   WINDOW rsp4j:window2 { ?person2 :isWith ?person1 .}"
+                + "   WINDOW rsp4j:window3 { ?testResult a :TestResultPost; :who ?person3; :hasResult :positive .}"
+                + " FILTER(?person3 = ?person || ?person3 = ?person2)."
                 + "}");
 
     // Create the RSP4J Task and Continuous Program
