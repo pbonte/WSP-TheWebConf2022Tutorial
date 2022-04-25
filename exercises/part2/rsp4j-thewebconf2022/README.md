@@ -1,6 +1,6 @@
-# RSP4J @ IEEE Big Data 2021 ![Alt text](https://raw.githubusercontent.com/streamreasoning/rsp4j/master/figs/rsp4jLogo.svg)
+# RSP4J @ the Web Conf 2022 ![Alt text](https://raw.githubusercontent.com/streamreasoning/rsp4j/master/figs/rsp4jLogo.svg)
 
-This repository contains the examples and exercises for the RSP4J tutorial at IEEE Big Data 2021.
+This repository contains the examples and exercises for the RSP4J tutorial at the Web Conf 2022.
 
 We will use a covid scenario consisting of two room (BlueRoom and RedRoom) and 4 types of streams:
 1. RFID observations that report the location of a person through RFID tags.
@@ -23,18 +23,18 @@ During the examples and exercises, we will look at solving the following queries
 
 To get started clone this repository:
 ```
-git clone https://github.com/pbonte/rsp4j-bigdata2021/
+git clone https://github.com/pbonte/WSP-TheWebConf2022Tutorial
 ```
 
 Move to the rsp4j-bigdata2021 folder and compile through maven:
 ```
-cd rsp4j-bigdata2021/
+cd exercises/part2/rsp4j-thewebconf2022/
 mvn clean install -DskipTests
 ```
 
 Open the project with your favorate IDE, e.g. IntelliJ or Eclipse.
 
-You can find the examples in the folder `src/main/java/org/streamreasoning/rsp4j/bigdata2021/processing/examples/` and the assignments in `src/main/java/org/streamreasoning/rsp4j/bigdata2021/processing/assignments/`.
+You can find the examples in the folder `src/main/java/org/streamreasoning/rsp4j/thewebconf2022/processing/examples/` and the assignments in `src/main/java/org/streamreasoning/rsp4j/thewebconf2022/processing/assignments/`.
 
 # RSP4J
 
