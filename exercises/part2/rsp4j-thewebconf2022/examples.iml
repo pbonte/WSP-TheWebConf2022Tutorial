@@ -51,28 +51,16 @@
     <orderEntry type="library" name="Maven: org.apache.commons:commons-rdf-jena:0.5.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.commons:commons-rdf-simple:0.5.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.jena:jena-osgi:3.5.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpclient-osgi:4.5.3" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpcore-osgi:4.4.6" level="project" />
     <orderEntry type="library" name="Maven: org.apache.commons:commons-csv:1.4" level="project" />
     <orderEntry type="library" name="Maven: org.apache.thrift:libthrift:0.9.3" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:jcl-over-slf4j:1.7.25" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.25" level="project" />
     <orderEntry type="library" name="Maven: org.apache.commons:commons-lang3:3.4" level="project" />
     <orderEntry type="library" name="Maven: org.osgi:org.osgi.core:5.0.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.servicemix.bundles:org.apache.servicemix.bundles.xerces:2.11.0_1" level="project" />
     <orderEntry type="library" name="Maven: xml-apis:xml-apis:1.4.01" level="project" />
     <orderEntry type="library" name="Maven: com.github.andrewoma.dexx:collection:0.7" level="project" />
-    <orderEntry type="library" name="Maven: com.github.jsonld-java:jsonld-java:0.13.3" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.11.4" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.11.4" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.11.4" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpclient-osgi:4.5.13" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpclient:4.5.13" level="project" />
-    <orderEntry type="library" name="Maven: commons-codec:commons-codec:1.11" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpmime:4.5.13" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpclient-cache:4.5.13" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.httpcomponents:fluent-hc:4.5.13" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpcore-osgi:4.4.14" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpcore:4.4.14" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpcore-nio:4.4.14" level="project" />
-    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.30" level="project" />
-    <orderEntry type="library" name="Maven: org.slf4j:jcl-over-slf4j:1.7.30" level="project" />
-    <orderEntry type="library" name="Maven: commons-io:commons-io:2.8.0" level="project" />
   </component>
 </module>
